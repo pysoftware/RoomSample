@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val wordsDataDao = db?.wordsDataDao()
 
         GlobalScope.launch(Dispatchers.IO) {
-            wordsDataDao?.insert(EntityWordsData(1, "Hello", "Привет", null, null))
+            wordsDataDao?.insert(EntityWordsData(null, "Mama", "Мама", null, null))
             textView.text = wordsDataDao?.getAllWords().toString()
         }
 
